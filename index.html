@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mô tả điện thoại</title>
+    <script src="mobie.js"></script>
+</head>
+<body>
+<script>
+    mobile = new Mobile(1, [], [], [], true);
+    iphone = new Mobile(99, [], [], [], true);
+    if (mobile.checkStatus() === true) {
+        alert("điện thoại đang bật");
+    }
+    mobile.chargeBattery();
+    alert("pin điện thoại mobie: " + mobile.battery);
+    mobile.createMessage("hi! chào cậu");
+    mobile.receiveMessage("chào cậu", iphone);
+    iphone.sentMessage("chào bạn", mobile);
+</script>
+</body>
+</html>
